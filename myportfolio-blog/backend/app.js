@@ -13,6 +13,10 @@ app.use(cors({
 }));
 app.use(express.json({ limit: "1mb" }));
 
+app.get("/", (req, res) => {
+  res.send("MyPortfolio Backend is running");
+});
+
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", message: "MyPortfolio API is running" });
 });
